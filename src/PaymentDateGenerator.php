@@ -107,7 +107,7 @@ class PaymentDateGenerator
         try {
             // Check if the directory exists; if not, create it
             if (!is_dir($csvDirectory)) {
-                if (!mkdir($csvDirectory, 0777, true) && !is_dir($csvDirectory)) {
+                if (!mkdir($csvDirectory, 0750, true) && !is_dir($csvDirectory)) {
                     throw new RuntimeException('Failed to create directory for CSV files.');
                 }
             }
